@@ -79,10 +79,10 @@ class _IOSSettingsTileState extends State<IOSSettingsTile> {
     return ClipRRect(
       borderRadius: BorderRadius.vertical(
         top: additionalInfo.enableTopBorderRadius
-            ? Radius.circular(12)
+            ? Radius.circular(26)
             : Radius.zero,
         bottom: additionalInfo.enableBottomBorderRadius
-            ? Radius.circular(12)
+            ? Radius.circular(26)
             : Radius.zero,
       ),
       child: content,
