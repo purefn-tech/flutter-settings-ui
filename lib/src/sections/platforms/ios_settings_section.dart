@@ -7,11 +7,13 @@ class IOSSettingsSection extends StatelessWidget {
     required this.tiles,
     required this.margin,
     required this.title,
+    required this.needToShowDivider,
     Key? key,
   }) : super(key: key);
 
   final List<AbstractSettingsTile> tiles;
   final EdgeInsetsDirectional? margin;
+  final bool needToShowDivider;
   final Widget? title;
 
   @override
@@ -82,7 +84,7 @@ class IOSSettingsSection extends StatelessWidget {
         return IOSSettingsTileAdditionalInfo(
           enableTopBorderRadius: enableTop,
           enableBottomBorderRadius: enableBottom,
-          needToShowDivider: index != tiles.length - 1,
+          needToShowDivider: needToShowDivider ? index != tiles.length - 1 : false,
           child: tile,
         );
       },
