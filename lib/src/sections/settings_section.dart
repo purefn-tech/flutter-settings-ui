@@ -12,11 +12,13 @@ class SettingsSection extends AbstractSettingsSection {
     required this.tiles,
     this.margin,
     this.title,
+    this.needToShowDivider,
     Key? key,
   }) : super(key: key);
 
   final List<AbstractSettingsTile> tiles;
   final EdgeInsetsDirectional? margin;
+  final bool? needToShowDivider;
   final Widget? title;
 
   @override
@@ -39,6 +41,7 @@ class SettingsSection extends AbstractSettingsSection {
           title: title,
           tiles: tiles,
           margin: margin,
+          needToShowDivider: needToShowDivider == true,
         );
       case DevicePlatform.web:
         return WebSettingsSection(
