@@ -38,6 +38,7 @@ class IOSSettingsSection extends StatelessWidget {
             Padding(
               padding: EdgeInsetsDirectional.only(
                 start: 18,
+                top: 12,
                 bottom: 5 * scaleFactor,
               ),
               child: DefaultTextStyle(
